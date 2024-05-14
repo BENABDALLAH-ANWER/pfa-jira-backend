@@ -34,7 +34,7 @@ app.use('/api/user', userRoute)
 app.use('/api/project', projectRoute)
 app.use('/api/list', restrictProjectMiddleware, listRoute)
 app.use('/api/issue', restrictProjectMiddleware, issueRoute)
-//app.use('/api/member', restrictProjectMiddleware, memberRoute)
+app.use('/api/member', restrictProjectMiddleware, memberRoute)
 app.use('/api/comment', restrictProjectMiddleware, commentRoute)
 
 app.listen(process.env.PORT || 5055)
