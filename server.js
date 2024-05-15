@@ -20,6 +20,7 @@ const corOptions = {
 }
 
 // Configuration Variable ENV
+//
 const dotenv = require('dotenv');
 dotenv.config({ path: 'config.env' });
 
@@ -34,6 +35,6 @@ app.use('/api/project', projectRoute)
 app.use('/api/list', restrictProjectMiddleware, listRoute)
 app.use('/api/issue', restrictProjectMiddleware, issueRoute)
 app.use('/api/member', restrictProjectMiddleware, memberRoute)
-app.use('/api/comment', restrictProjectMiddleware, commentRoute)
+//app.use('/api/comment', restrictProjectMiddleware, commentRoute)
 
 app.listen(process.env.PORT || 5055)
